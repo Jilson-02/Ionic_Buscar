@@ -1,0 +1,36 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title>API</ion-title>
+    <!-- Botón de cerrar sesión -->
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="salir()">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Cerrar sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <!-- Contenido de la página -->
+  <div class="container">
+    <form >
+     
+    <ion-searchbar #nombre (keyup.enter)="searchMovies(nombre)" animated="true" placeholder="Buscar Pelicula..."></ion-searchbar>
+
+      <ion-card *ngFor="let item of peliculas">
+        <img alt="Silhouette of mountains" src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" />
+        <ion-card-header>
+          <ion-card-title>{{item.original_title}}</ion-card-title>
+          <ion-card-subtitle>{{item.release_date}}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{item.overview}}
+        </ion-card-content>
+      </ion-card>
+  </form>
+  </div>
+</ion-content>
