@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./Pagina/principal/principal.module').then( m => m.PrincipalPageModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'crear-cuenta',
+    loadChildren: () => import('./Pagina/crear-cuenta/crear-cuenta.module').then( m => m.CrearCuentaPageModule)
+  },
 ];
 
 @NgModule({

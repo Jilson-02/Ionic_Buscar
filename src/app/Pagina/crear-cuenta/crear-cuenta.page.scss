@@ -1,0 +1,23 @@
+.title-centered {
+  text-align: center;
+  width: 100%;
+}
+
+.form-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+ion-item {
+  width: 90%;
+  max-width: 500px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 500px;
+}

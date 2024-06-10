@@ -18,4 +18,13 @@ export class MensajesService {
     await toast.present();
   }
 
+  async MessajeExito(msj:string, ic:string) {
+    const toast = await this.toastController.create({
+      message: msj,
+      duration: 1500,
+      position: 'bottom',
+      icon: ic,
+    });
+    await toast.present();
+  }
 }
